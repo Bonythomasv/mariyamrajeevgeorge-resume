@@ -1,237 +1,206 @@
 import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
-  about: "Full Stack Engineer dedicated to building high-quality products.",
+  name: "Bony Thomas",
+  initials: "BT",
+  location: "Vancouver, BC",
+  locationLink: "https://www.google.com/maps/place/Vancouver",
+  about: "Senior Software Developer dedicated to building scalable cloud solutions",
+  avatarUrl: "/bony-profile.jpg",
+  // personalWebsiteUrl: "https://bonythomas.com",
   summary: (
     <>
-      Full Stack Engineer specializing in high-performance React applications,
-      scalable Node.js services, and real-time collaboration systems.
-      Experienced in technical architecture design and remote team leadership.
+      Results-driven Senior Software Engineer with 14+ years of experience designing scalable,
+      cloud-native applications using Java, Spring Boot, and microservices architecture.
+      Expertise in CI/CD, cloud platforms (AWS, OpenStack), and containerization (Docker, Kubernetes)
+      to deliver high-performance, scalable solutions.
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "bonythomasv@gmail.com",
+    tel: "778-444-1800",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/Bonythomasv",
         icon: "github",
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/bonythomas/",
         icon: "linkedin",
       },
-      {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: "x",
-      },
     ],
+    image: "/bony-profile.jpg", // Profile image in public directory
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
+      school: "Cochin University of Science and Technlogy",
+      degree: "Bachelors in Electronics and communication",
+      start: "2006",
       end: "2010",
     },
   ],
   work: [
     {
-      company: "Motion",
-      link: "https://motionapp.com/",
-      badges: ["Remote", "AI", "React", "Next.js", "TypeScript", "AdonisJS"],
-      title: "Senior Software Engineer",
-      start: "2025",
+      company: "The University of British Columbia",
+      link: "",
+      badges: ["Java", "Spring Boot", "AWS", "Microservices"],
+      title: "Senior Software Developer",
+      start: "2022",
       end: null,
       description: (
         <>
-          Working on internal AI agents platform allowing marketing specialists
-          to create AI workflows.
-        </>
-      ),
-    },
-    {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
-      start: "2024",
-      end: "2025",
-      description: (
-        <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
           <ul className="list-inside list-disc">
             <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
+              Developed MuleSoft-based APIs for cloud migration, improving scalability and performance
             </li>
             <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
+              Built microservices using Spring Boot (Java 17) for cloud projects, enabling rapid
+              deployment
             </li>
             <li>
-              Implementing system-wide monitoring and security improvements
+              Integrated AWS ElasticSearch for data aggregation, optimizing performance
             </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: [
-        "Remote",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
-      ],
-      title: "Senior Full Stack Developer",
+      company: "Pattison Food Group",
+      link: "",
+      badges: ["Java", "Spring Boot", "Android", "Microservices"],
+      title: "Technical Lead",
       start: "2021",
-      end: "2024",
+      end: "2022",
       description: (
         <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
           <ul className="list-inside list-disc">
             <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
+              Led a team of 9 developers to build Store Inventory Management System with 50+
+              microservices for real-time tracking
             </li>
             <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
+              Implemented Android-based applications for inventory and tracking
             </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      start: "2015",
+      company: "Global Relay",
+      link: "",
+      badges: ["Java", "Spring Boot", "Performance Optimization"],
+      title: "Senior Backend Engineer",
+      start: "2020",
       end: "2021",
       description: (
         <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
           <ul className="list-inside list-disc">
             <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
+              Optimized performance of the A10 SaaS product, enhancing latency and throughput
             </li>
             <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
+              Integrated Aerospike cache and optimized Garbage Collection (GC) for improved system
+              performance
             </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      start: "2012",
+      company: "Target Corporation",
+      link: "",
+      badges: ["Java", "Spring", "Microservices"],
+      title: "Senior Engineer",
+      start: "2015",
+      end: "2020",
+      description: (
+        <>
+          <ul className="list-inside list-disc">
+            <li>
+              Designed and developed microservices for Workload Management and Target Alert Central,
+              saving $5M in vendor costs
+            </li>
+            <li>
+              Enhanced Drive-Up feature to streamline curbside pickup, significantly improving customer
+              experience
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      company: "FirstData",
+      link: "",
+      badges: ["Java", "Android", "Salesforce"],
+      title: "Lead Programmer/Analyst",
+      start: "2015",
+      end: "2016",
+      description: (
+        <>
+          <ul className="list-inside list-disc">
+            <li>
+              Integrated Payeezy payment gateway for SNAP merchant onboarding
+            </li>
+            <li>
+              Designed Android and Salesforce applications with SSO using Mobile SDK
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      company: "Target Corporation",
+      link: "",
+      badges: ["Java", "Spring", "Oracle"],
+      title: "Systems Programmer Analyst",
+      start: "2010",
       end: "2015",
       description: (
         <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
           <ul className="list-inside list-disc">
             <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
+              Migrated Oracle Forms Applications to java/Spring-based 3 tier solution for Distribution
+              centers
             </li>
-            <li>Built and mentored high-performing mobile development team</li>
+            <li>
+              Implemented NICE SmartCenter and IEX Workforce Management Systems
+            </li>
+            <li>
+              Developed compliance systems for handling hazardous materials using Web Services and
+              Oracle
+            </li>
           </ul>
         </>
       ),
     },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      start: "2010",
-      end: "2012",
-      description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
-    },
   ],
   skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
+    "Java",
+    "Spring Boot",
+    "Microservices Architecture",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "Oracle",
+    "Postgres",
+    "Cassandra",
+    "REST/SOAP",
+    "Angular",
+    "ReactJS",
   ],
   projects: [
     {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
-      description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
+      title: "Certificate in Blockchain Development",
+      techStack: ["Blockchain", "Smart Contracts"],
+      description: "The University of British Columbia",
     },
     {
-      title: "Consultly",
-      techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
-      ],
-      description:
-        "Platform for online consultations with real-time video meetings and scheduling",
-      link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
-      },
-    },
-    {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
-      description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
-      link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
-      },
+      title: "Fundamentals of Artificial Intelligence Cloud Strategy",
+      techStack: ["AI", "Cloud Computing"],
+      description: "The University of British Columbia",
     },
   ],
 } as const;

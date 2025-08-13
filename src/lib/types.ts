@@ -21,6 +21,7 @@ export interface ResumeData {
       url: string;
       icon: IconType;
     }>;
+    image?: string;
   };
   education: Array<{
     school: string;
