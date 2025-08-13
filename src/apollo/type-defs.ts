@@ -107,8 +107,8 @@ export class Me {
   @Field(() => String)
   avatarUrl: string;
 
-  @Field(() => String)
-  personalWebsiteUrl: string;
+  @Field(() => String, { nullable: true })
+  personalWebsiteUrl?: string;
 
   @Field(() => Contact)
   contact: Contact;
