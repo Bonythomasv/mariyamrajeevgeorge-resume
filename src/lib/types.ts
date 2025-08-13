@@ -12,7 +12,7 @@ export interface ResumeData {
   about: string;
   summary: string | React.ReactNode;
   avatarUrl: string;
-  personalWebsiteUrl: string;
+  personalWebsiteUrl?: string;
   contact: {
     email: string;
     tel: string;
@@ -99,7 +99,7 @@ export interface GraphQLMe {
   about: string;
   summary: string;
   avatarUrl: string;
-  personalWebsiteUrl: string;
+  personalWebsiteUrl?: string;
   contact: GraphQLContact;
   education: GraphQLEducation[];
   work: GraphQLWork[];
