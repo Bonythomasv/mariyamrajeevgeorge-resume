@@ -3,9 +3,9 @@ import type { ResumeData } from "@/lib/types";
 export const RESUME_DATA_DETAILED: ResumeData = {
   name: "Bony Thomas",
   initials: "BT",
-  location: "Vancouver, BC",
-  locationLink: "https://www.google.com/maps/place/Vancouver",
-  about: "Oracle Certified Java Programmer | Senior Software Developer | 15+ Years Experience",
+  location: "", // Temporarily disabled
+  locationLink: "", // Temporarily disabled
+  about: "Senior Software Developer at UBC | Ex-Target | Ex-Global Relay | Oracle Certified Java Programmer | 15+ Years Experience",
   avatarUrl: "/bony-profile.jpg",
   summary: (
     <>
@@ -197,24 +197,31 @@ export const RESUME_DATA_DETAILED: ResumeData = {
   ],
   projects: [
     {
-      title: "UBC API Modernization",
-      techStack: ["Java", "MuleSoft", "AWS", "PostgreSQL", "Bamboo"],
-      description: "Led the development of MuleSoft-based API orchestrations, rebuilding foundational API services for UBC staff, public, and students.",
+      title: "Certificate in Blockchain Development",
+      techStack: ["Blockchain", "Smart Contracts", "DeFi", "NFTs"],
+      description: "Comprehensive certification in blockchain technology fundamentals, focusing on evaluating and implementing blockchain solutions across various industries. Gained expertise in analyzing distributed ledger technologies, digital tokens, and smart contracts for business transformation.",
+      link: {
+        label: "View Credential",
+        href: "https://www.credential.net/537a1570-67dd-45c4-a08b-a3fe4f44da0e#acc.AkgKvHUf"
+      }
     },
     {
-      title: "Store Inventory Management System",
-      techStack: ["Java", "Spring Boot", "Azure", "Oracle", "Elastic Search"],
-      description: "Architected and led development of 50+ microservices managing inventory across multiple store banners for Pattison Food Group.",
+      title: "Fundamentals of Artificial Intelligence Cloud Strategy",
+      techStack: ["AI", "Cloud Computing"],
+      description: "Comprehensive certification focused on developing strategies for AI cloud adoption, covering security, cost-benefit analysis, and organizational impact. Gained expertise in evaluating and implementing cloud-based AI solutions for business transformation.",
+      link: {
+        label: "View Credential",
+        href: "https://www.credential.net/18a3033f-d409-4bca-b6cc-ba4c17cadd26#acc.jMifb8TS"
+      }
     },
     {
-      title: "A10 Performance Optimization",
-      techStack: ["Java", "Cassandra", "Elasticsearch", "OpenStack", "Kubernetes"],
-      description: "Improved performance and reduced latency for Global Relay's flagship archiving solution handling petabytes of data.",
-    },
-    {
-      title: "Target Alert Platform",
-      techStack: ["Java", "Kafka", "Cassandra", "Angular JS", "Google FCM"],
-      description: "Designed microservices for Target's alert platform, handling communications for 200,000+ team members.",
+      title: "Harvest Store + Cafe",
+      techStack: ["Next.js", "Gemini AI", "TypeScript", "Tailwind"],
+      description: "Built a modern cafe website integrating Google's Gemini AI for enhanced customer interaction and menu recommendations. Code available at github.com/Bonythomasv/harvest-cafe-store",
+      link: {
+        label: "theharvestcafe.ca",
+        href: "https://theharvestcafe.ca"
+      }
     }
   ],
 } as const;

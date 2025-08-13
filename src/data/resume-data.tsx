@@ -3,9 +3,9 @@ import type { ResumeData } from "@/lib/types";
 export const RESUME_DATA: ResumeData = {
   name: "Bony Thomas",
   initials: "BT",
-  location: "Vancouver, BC",
-  locationLink: "https://www.google.com/maps/place/Vancouver",
-  about: "Senior Software Developer dedicated to building scalable cloud solutions",
+  location: "", // Temporarily disabled
+  locationLink: "", // Temporarily disabled
+  about: "Senior Software Developer at UBC | Ex-Target | Ex-Global Relay | Oracle Certified Java Programmer | 15+ Years Experience",
   avatarUrl: "/bony-profile.jpg",
   // personalWebsiteUrl: "https://bonythomas.com",
   summary: (
@@ -199,13 +199,30 @@ export const RESUME_DATA: ResumeData = {
   projects: [
     {
       title: "Certificate in Blockchain Development",
-      techStack: ["Blockchain", "Smart Contracts"],
-      description: "The University of British Columbia",
+      techStack: ["Blockchain", "Smart Contracts", "DeFi", "NFTs"],
+      description: "Comprehensive certification in blockchain technology fundamentals, focusing on evaluating and implementing blockchain solutions across various industries. Gained expertise in analyzing distributed ledger technologies, digital tokens, and smart contracts for business transformation.",
+      link: {
+        label: "View Credential",
+        href: "https://www.credential.net/537a1570-67dd-45c4-a08b-a3fe4f44da0e#acc.AkgKvHUf"
+      }
     },
     {
       title: "Fundamentals of Artificial Intelligence Cloud Strategy",
       techStack: ["AI", "Cloud Computing"],
-      description: "The University of British Columbia",
+      description: "Comprehensive certification focused on developing strategies for AI cloud adoption, covering security, cost-benefit analysis, and organizational impact. Gained expertise in evaluating and implementing cloud-based AI solutions for business transformation.",
+      link: {
+        label: "View Credential",
+        href: "https://www.credential.net/18a3033f-d409-4bca-b6cc-ba4c17cadd26#acc.jMifb8TS"
+      }
     },
+    {
+      title: "Harvest Store + Cafe",
+      techStack: ["Next.js", "Gemini AI", "TypeScript", "Tailwind"],
+      description: "Built a modern cafe website integrating Google's Gemini AI for enhanced customer interaction and menu recommendations. Code available at github.com/Bonythomasv/harvest-cafe-store",
+      link: {
+        label: "theharvestcafe.ca",
+        href: "https://theharvestcafe.ca"
+      }
+    }
   ],
 } as const;

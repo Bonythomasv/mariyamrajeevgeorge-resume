@@ -27,12 +27,13 @@ function LocationLink({
   location,
   locationLink,
 }: LocationLinkProps) {
+  if (!location) return null;  // Don't render anything if location is empty
+  
   return (
     <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
       <a
         className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
         href={locationLink}
-        target="_blank"
         rel="noopener noreferrer"
         aria-label={`Location: ${location}`}
       >

@@ -3,16 +3,40 @@ import { RESUME_DATA_DETAILED } from "@/data/resume-data-detailed";
 import { Section } from "@/components/ui/section";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, PhoneIcon, ArrowLeft } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { CommandMenu } from "@/components/command-menu";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA_DETAILED.name} | Detailed Resume`,
   description: RESUME_DATA_DETAILED.about,
 };
 
+function getCommandMenuLinks() {
+  const links = [];
+
+  if (RESUME_DATA_DETAILED.personalWebsiteUrl) {
+    links.push({
+      url: RESUME_DATA_DETAILED.personalWebsiteUrl,
+      title: "Personal Website",
+    });
+  }
+
+  return [
+    ...links,
+    ...RESUME_DATA_DETAILED.contact.social.map((socialMediaLink) => ({
+      url: socialMediaLink.url,
+      title: socialMediaLink.name,
+    })),
+  ];
+}
+
 export default function DetailedResume() {
   return (
-    <main className="container mx-auto max-w-5xl px-4 py-8 md:py-12">
+    <main className="container relative mx-auto max-w-5xl px-4 py-8 md:py-12">
+      <CommandMenu links={getCommandMenuLinks()} />
+      
       {/* Header */}
       <section className="mb-12">
         <div className="flex flex-col items-center gap-4 text-center md:flex-row md:items-start md:text-left">
@@ -28,7 +52,7 @@ export default function DetailedResume() {
             <p className="mt-2 text-lg text-muted-foreground">
               {RESUME_DATA_DETAILED.about}
             </p>
-            
+
             <div className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start">
               <Button variant="outline" size="sm" asChild>
                 <a href={`mailto:${RESUME_DATA_DETAILED.contact.email}`}>
@@ -55,41 +79,47 @@ export default function DetailedResume() {
       </section>
 
       {/* Summary */}
-      <Section className="mb-8">
+      <Section>
         <h2 className="text-2xl font-bold">Professional Summary</h2>
-        <div className="prose mt-2 max-w-none text-muted-foreground">
+        <div className="prose mt-3 max-w-none text-muted-foreground">
           {RESUME_DATA_DETAILED.summary}
+        </div>
+        <div className="mt-4 text-center">
+          <Link href="/" className="text-xs text-muted-foreground hover:text-foreground">
+            View one-page resume ↑
+          </Link>
         </div>
       </Section>
 
       {/* Work Experience */}
-      <Section className="mb-8">
+      <Section className="mt-8">
         <h2 className="text-2xl font-bold">Work Experience</h2>
         <div className="mt-6 space-y-8">
           {RESUME_DATA_DETAILED.work.map((work) => (
             <div key={work.company} className="space-y-2">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold">
-                  {work.company}
-                </h3>
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    {work.company}
+                  </h3>
+                  <p className="text-lg font-medium text-muted-foreground">
+                    {work.title}
+                  </p>
+                </div>
                 <div className="text-sm text-muted-foreground">
                   {work.start} - {work.end || "Present"}
                 </div>
               </div>
-              <h4 className="text-lg font-medium text-muted-foreground">
-                {work.title}
-              </h4>
+              
               <div className="flex flex-wrap gap-2">
                 {work.badges.map((badge) => (
-                  <span 
-                    key={badge} 
-                    className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                  >
+                  <Badge key={badge} variant="secondary">
                     {badge}
-                  </span>
+                  </Badge>
                 ))}
               </div>
-              <div className="prose mt-2 max-w-none text-muted-foreground">
+
+              <div className="prose text-muted-foreground">
                 {work.description}
               </div>
             </div>
@@ -98,31 +128,63 @@ export default function DetailedResume() {
       </Section>
 
       {/* Skills */}
-      <Section className="mb-8">
+      <Section className="mt-8">
         <h2 className="text-2xl font-bold">Skills & Technologies</h2>
         <div className="mt-4 flex flex-wrap gap-2">
           {RESUME_DATA_DETAILED.skills.map((skill) => (
-            <span 
-              key={skill}
-              className="inline-flex items-center rounded-md bg-muted px-2.5 py-0.5 text-sm font-medium text-muted-foreground"
-            >
+            <Badge key={skill} variant="outline">
               {skill}
-            </span>
+            </Badge>
           ))}
         </div>
       </Section>
 
       {/* Education */}
-      <Section>
+      <Section className="mt-8">
         <h2 className="text-2xl font-bold">Education</h2>
         <div className="mt-4 space-y-4">
           {RESUME_DATA_DETAILED.education.map((education) => (
-            <div key={education.school}>
-              <h3 className="font-semibold">{education.school}</h3>
+            <div key={education.school} className="space-y-1">
+              <h3 className="text-lg font-medium">{education.school}</h3>
               <p className="text-muted-foreground">{education.degree}</p>
               <p className="text-sm text-muted-foreground">
                 {education.start} - {education.end}
               </p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Projects & Certifications */}
+      <Section className="mt-8">
+        <h2 className="text-2xl font-bold">Projects & Certifications</h2>
+        <div className="mt-6 space-y-6">
+          {RESUME_DATA_DETAILED.projects.map((project) => (
+            <div key={project.title} className="space-y-2">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    {project.title}
+                  </h3>
+                </div>
+                {project.link && (
+                  <Button variant="link" size="sm" asChild>
+                    <a href={project.link.href} target="_blank" rel="noopener noreferrer">
+                      {project.link.label}
+                    </a>
+                  </Button>
+                )}
+              </div>
+              
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.map((tech) => (
+                  <Badge key={tech} variant="secondary">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+
+              <p className="text-muted-foreground">{project.description}</p>
             </div>
           ))}
         </div>

@@ -10,10 +10,12 @@ export function generatePersonStructuredData() {
     url: RESUME_DATA.personalWebsiteUrl,
     image: RESUME_DATA.avatarUrl,
     sameAs: RESUME_DATA.contact.social.map((social) => social.url),
-    address: {
-      "@type": "Place",
-      name: RESUME_DATA.location,
-    },
+    ...(RESUME_DATA.location && {
+      address: {
+        "@type": "Place",
+        name: RESUME_DATA.location,
+      },
+    }),
     contactPoint: {
       "@type": "ContactPoint",
       email: RESUME_DATA.contact.email,
@@ -36,10 +38,12 @@ export function generatePersonStructuredData() {
     hasOccupation: RESUME_DATA.work.map((job) => ({
       "@type": "Occupation",
       name: job.title,
-      occupationLocation: {
-        "@type": "Place",
-        name: RESUME_DATA.location,
-      },
+      ...(RESUME_DATA.location && {
+        occupationLocation: {
+          "@type": "Place",
+          name: RESUME_DATA.location,
+        },
+      }),
       occupationalCategory: "Software Engineering",
       estimatedSalary: {
         "@type": "MonetaryAmountDistribution",
