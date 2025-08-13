@@ -10,10 +10,13 @@ export const RESUME_DATA: ResumeData = {
   // personalWebsiteUrl: "https://bonythomas.com",
   summary: (
     <>
-      Results-driven Senior Software Engineer with 14+ years of experience designing scalable,
+      Results-driven Senior Software Engineer with 15+ years of experience designing scalable,
       cloud-native applications using Java, Spring Boot, and microservices architecture.
-      Expertise in CI/CD, cloud platforms (AWS, OpenStack), and containerization (Docker, Kubernetes)
+      Expertise in CI/CD, cloud platforms (AWS, Azure, GCP, OpenStack), and containerization (Docker, Kubernetes)
       to deliver high-performance, scalable solutions.
+      <span className="text-xs text-gray-400 hover:text-gray-500 ml-1">
+        <a href="/detailed-resume">[view detailed experience]</a>
+      </span>
     </>
   ),
   contact: {
@@ -181,6 +184,8 @@ export const RESUME_DATA: ResumeData = {
     "Spring Boot",
     "Microservices Architecture",
     "AWS",
+    "Azure",
+    "GCP",
     "Docker",
     "Kubernetes",
     "CI/CD",
