@@ -17,6 +17,9 @@ export const RESUME_DATA: ResumeData = {
       <span className="text-xs text-gray-400 hover:text-gray-500 ml-1">
         <a href="/detailed-resume">[view detailed experience]</a>
       </span>
+      <span className="text-xs text-gray-400 hover:text-gray-500 ml-1">
+        <a href="/RESUME-Bony-1-page-02-2025.pdf" target="_blank" rel="noopener noreferrer">[download pdf]</a>
+      </span>
     </>
   ),
   contact: {
