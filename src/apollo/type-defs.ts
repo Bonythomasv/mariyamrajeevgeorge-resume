@@ -89,8 +89,8 @@ export class Me {
   @Field(() => String)
   name: string;
 
-  @Field(() => String)
-  initials: string;
+  @Field(() => String, { nullable: true })
+  initials?: string;
 
   @Field(() => String)
   location: string;
@@ -104,8 +104,8 @@ export class Me {
   @Field(() => String)
   summary: string;
 
-  @Field(() => String)
-  avatarUrl: string;
+  @Field(() => String, { nullable: true })
+  avatarUrl?: string;
 
   @Field(() => String, { nullable: true })
   personalWebsiteUrl?: string;
