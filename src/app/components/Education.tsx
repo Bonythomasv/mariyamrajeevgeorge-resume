@@ -15,10 +15,7 @@ interface EducationPeriodProps {
  */
 function EducationPeriod({ start, end }: EducationPeriodProps) {
   return (
-    <div
-      className="text-sm tabular-nums text-gray-500"
-      title={`Period: ${start} to ${end}`}
-    >
+    <div className="text-sm tabular-nums text-muted-foreground">
       {start} - {end}
     </div>
   );
@@ -32,28 +29,29 @@ interface EducationItemProps {
  * Individual education card component
  */
 function EducationItem({ education }: EducationItemProps) {
-  const { school, start, end, degree } = education;
+  const { 
+    school, 
+    degree, 
+    start, 
+    end, 
+    description
+  } = education;
 
   return (
-    <Card>
-      <CardHeader>
-        <div className="flex items-center justify-between gap-x-2 text-base">
-          <h3
-            className="font-semibold leading-none"
-            id={`education-${school.toLowerCase().replace(/\s+/g, "-")}`}
-          >
-            {school}
-          </h3>
+    <Card className="hover:bg-accent/50 transition-colors">
+      <CardHeader className="pb-2">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="text-base font-medium">{school}</h3>
           <EducationPeriod start={start} end={end} />
         </div>
+        <h4 className="text-sm text-muted-foreground">
+          {degree}
+        </h4>
       </CardHeader>
-      <CardContent
-        className="mt-2 text-foreground/80 print:text-[12px]"
-        aria-labelledby={`education-${school
-          .toLowerCase()
-          .replace(/\s+/g, "-")}`}
-      >
-        {degree}
+      <CardContent className="pb-4">
+        <div className="text-sm text-foreground/90">
+          {description}
+        </div>
       </CardContent>
     </Card>
   );

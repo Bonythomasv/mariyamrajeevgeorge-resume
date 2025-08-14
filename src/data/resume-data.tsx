@@ -1,181 +1,130 @@
 import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
-  name: "Bony Thomas",
-  initials: "BT",
+  name: "Mariyam Rajeev George",
+  initials: "MG",
   location: "", // Temporarily disabled
   locationLink: "", // Temporarily disabled
-  about: "Senior Software Developer at UBC | Ex-Target | Ex-Global Relay | Oracle Certified Java Programmer | 15+ Years Experience",
-  avatarUrl: "/bony-profile.jpg",
-  // personalWebsiteUrl: "https://bonythomas.com",
+  about: "Senior Data Engineer at Avanade @ Meta | Ex-phData @ Cargill | Databricks Certified | 9+ Years Experience",
+  avatarUrl: "/mariyam-profile.jpg",
   summary: (
     <>
-      Results-driven Senior Software Engineer with 15+ years of experience designing scalable,
-      cloud-native applications using Java, Spring Boot, and microservices architecture.
-      Expertise in CI/CD, cloud platforms (AWS, Azure, GCP, OpenStack), and containerization (Docker, Kubernetes)
-      to deliver high-performance, scalable solutions.
-      <span className="text-xs text-gray-400 hover:text-gray-500 ml-1">
+      Data Engineer with 9+ years of experience building scalable, low-latency data systems at companies
+      like Meta and Cargill. Proven track record of reducing compute costs, accelerating developer velocity,
+      and enabling experimentation through metric instrumentation. Skilled in Spark, Databricks, Presto,
+      Airflow, Hive, and Hadoop.
+      {/* <span className="text-xs text-gray-400 hover:text-gray-500 ml-1">
         <a href="/detailed-resume">[view detailed experience]</a>
-      </span>
+      </span> */}
       <span className="text-xs text-gray-400 hover:text-gray-500 ml-1">
-        <a href="/RESUME-Bony-1-page-02-2025.pdf" target="_blank" rel="noopener noreferrer">[download pdf]</a>
+        <a href="/MariyamRajeevGeorge-resume-one-page.pdf" target="_blank" rel="noopener noreferrer">[download pdf]</a>
       </span>
     </>
   ),
   contact: {
-    email: "bonythomasv@gmail.com",
-    tel: "778-444-1800",
+    email: "g.mariyam@gmail.com",
+    tel: "+1 (604) 600-6144",
     social: [
       {
-        name: "GitHub",
-        url: "https://github.com/Bonythomasv",
-        icon: "github",
-      },
-      {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bonythomas/",
+        url: "https://linkedin.com/in/mariyam-rajeev-george-8944b870",
         icon: "linkedin",
       },
     ],
-    image: "/bony-profile.jpg", // Profile image in public directory
+    image: "/mariyam-profile.jpg", // Profile image in public directory
   },
   education: [
     {
-      school: "Cochin University of Science and Technlogy",
-      degree: "Bachelors in Electronics and communication",
+      school: "University of St. Thomas",
+      location: "Minneapolis, MN, USA",
+      degree: "Master's in Data Science",
+      start: "2016",
+      end: "2018",
+      description: "Master's degree in Data Science with focus on statistical analysis, machine learning, and data visualization."
+    },
+    {
+      school: "Anna University",
+      location: "Chennai, India",
+      degree: "B.S. in Information Technology",
       start: "2006",
       end: "2010",
+      description: "Bachelor's degree in Information Technology with focus on software development and database management."
     },
   ],
   work: [
     {
-      company: "The University of British Columbia",
-      link: "",
-      badges: ["Java", "Spring Boot", "AWS", "Microservices"],
-      title: "Senior Software Developer",
+      company: "Avanade @ Meta",
+      link: "https://www.avanade.com",
+      badges: ["Databricks", "Spark", "Presto", "Airflow"],
+      title: "Senior Data Engineer",
       start: "2022",
-      end: null,
+      end: "Present",
       description: (
         <>
           <ul className="list-inside list-disc">
             <li>
-              Developed MuleSoft-based APIs for cloud migration, improving scalability and performance
+              Architected a multidimensional data aggregation framework powering 160+ widgets for Metaverse
+              analytics, reducing query latency from 45s to {'<3s'} and saving ~$60K/month in compute costs
             </li>
             <li>
-              Built microservices using Spring Boot (Java 17) for cloud projects, enabling rapid
-              deployment
+              Designed and implemented a data model and pipeline for Meta's internal Metaverse dogfooding
+              dashboard, enabling leadership to track employee usage against corporate VR adoption goals
             </li>
             <li>
-              Integrated AWS ElasticSearch for data aggregation, optimizing performance
+              Served as technical lead for a team of 5 data engineers, driving adoption of performance-driven
+              ETL practices and improving data reliability SLAs
             </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Pattison Food Group",
-      link: "",
-      badges: ["Java", "Spring Boot", "Android", "Microservices"],
-      title: "Technical Lead",
+      company: "Avanade @ Meta",
+      link: "https://www.avanade.com",
+      badges: ["Spark", "Presto", "Airflow", "Data Pipelines"],
+      title: "Data Engineer",
       start: "2021",
       end: "2022",
       description: (
         <>
           <ul className="list-inside list-disc">
             <li>
-              Led a team of 9 developers to build Store Inventory Management System with 50+
-              microservices for real-time tracking
+              Led a cross-functional effort to productionize code review health signals, enabling a 7% decrease
+              in review time and 10% reduction in churn through metrics instrumentation
             </li>
             <li>
-              Implemented Android-based applications for inventory and tracking
+              Built a full-stack analytics suite for Meta's Codemod Services, tracking KPIs that reduced
+              Sandcastle runtime by 15% and cut abandoned review effort by 30%
+            </li>
+            <li>
+              Developed dashboards that improved developer productivity by 20% through better visibility into
+              code review metrics and workflow inefficiencies
             </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Global Relay",
-      link: "",
-      badges: ["Java", "Spring Boot", "Performance Optimization"],
-      title: "Senior Backend Engineer",
-      start: "2020",
-      end: "2021",
-      description: (
-        <>
-          <ul className="list-inside list-disc">
-            <li>
-              Optimized performance of the A10 SaaS product, enhancing latency and throughput
-            </li>
-            <li>
-              Integrated Aerospike cache and optimized Garbage Collection (GC) for improved system
-              performance
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Target Corporation",
-      link: "",
-      badges: ["Java", "Spring", "Microservices"],
-      title: "Senior Engineer",
-      start: "2015",
+      company: "phData @ Cargill",
+      link: "https://www.phdata.io",
+      badges: ["Python", "Spark", "ETL", "SAP"],
+      title: "Data Engineer",
+      start: "2018",
       end: "2020",
       description: (
         <>
           <ul className="list-inside list-disc">
             <li>
-              Designed and developed microservices for Workload Management and Target Alert Central,
-              saving $5M in vendor costs
+              Built data migration pipelines using Python for a major SAP product, streamlining financial
+              data processing by 20% for actionable dashboard insights
             </li>
-            <li>
-              Enhanced Drive-Up feature to streamline curbside pickup, significantly improving customer
-              experience
+            <li className="leading-relaxed">
+              Developed scalable ETL workflows with Spark for SAP financial data, enhancing data quality and
+              enabling real-time supply chain analytics
             </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "FirstData",
-      link: "",
-      badges: ["Java", "Android", "Salesforce"],
-      title: "Lead Programmer/Analyst",
-      start: "2015",
-      end: "2016",
-      description: (
-        <>
-          <ul className="list-inside list-disc">
-            <li>
-              Integrated Payeezy payment gateway for SNAP merchant onboarding
-            </li>
-            <li>
-              Designed Android and Salesforce applications with SSO using Mobile SDK
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Target Corporation",
-      link: "",
-      badges: ["Java", "Spring", "Oracle"],
-      title: "Systems Programmer Analyst",
-      start: "2010",
-      end: "2015",
-      description: (
-        <>
-          <ul className="list-inside list-disc">
-            <li>
-              Migrated Oracle Forms Applications to java/Spring-based 3 tier solution for Distribution
-              centers
-            </li>
-            <li>
-              Implemented NICE SmartCenter and IEX Workforce Management Systems
-            </li>
-            <li>
-              Developed compliance systems for handling hazardous materials using Web Services and
-              Oracle
+            <li className="leading-relaxed">
+              Optimized SQL queries for SAP-driven dashboards, reducing compute costs by 15% and improving
+              financial reporting efficiency
             </li>
           </ul>
         </>
@@ -183,49 +132,97 @@ export const RESUME_DATA: ResumeData = {
     },
   ],
   skills: [
-    "Java",
-    "Spring Boot",
-    "Microservices Architecture",
-    "AWS",
+    "Data Modeling",
+    "Machine Learning",
+    "Databricks",
+    "Delta Lake",
+    "Apache Spark",
+    "Python",
+    "SQL",
+    "Apache Airflow",
+    "Presto",
+    "Hive",
+    "Hadoop",
+    "ETL/ELT",
+    "Data Pipelines",
     "Azure",
-    "GCP",
-    "Docker",
-    "Kubernetes",
-    "CI/CD",
-    "Oracle",
-    "Postgres",
-    "Cassandra",
-    "REST/SOAP",
-    "Angular",
-    "ReactJS",
+    "Power BI",
+    "Jupyter Notebooks",
+    "Agile/Scrum",
+    "CI/CD"
+  ],
+  
+  languages: [
+    { name: "English", level: "Full Professional" },
+    { name: "Hindi", level: "Professional Working" },
+    { name: "French", level: "Limited Working" }
   ],
   projects: [
+    // Certifications
     {
-      title: "Certificate in Blockchain Development",
-      techStack: ["Blockchain", "Smart Contracts", "DeFi", "NFTs"],
-      description: "Comprehensive certification in blockchain technology fundamentals, focusing on evaluating and implementing blockchain solutions across various industries. Gained expertise in analyzing distributed ledger technologies, digital tokens, and smart contracts for business transformation.",
+      title: "Databricks Certified Data Engineer Professional",
+      techStack: ["Databricks", "2022"],
+      description: "Certified in using Databricks for advanced data engineering tasks including ETL pipelines, data modeling, and implementing production-grade data solutions.",
       link: {
-        label: "View Credential",
-        href: "https://www.credential.net/537a1570-67dd-45c4-a08b-a3fe4f44da0e#acc.AkgKvHUf"
+        label: "Verify Credential",
+        href: "https://credentials.databricks.com/f2912de3-215b-4eda-add2-d269c1533ac1#acc.UmCM6o3u"
       }
     },
     {
-      title: "Fundamentals of Artificial Intelligence Cloud Strategy",
-      techStack: ["AI", "Cloud Computing"],
-      description: "Comprehensive certification focused on developing strategies for AI cloud adoption, covering security, cost-benefit analysis, and organizational impact. Gained expertise in evaluating and implementing cloud-based AI solutions for business transformation.",
+      title: "Databricks Certified Data Engineer Associate",
+      techStack: ["Databricks", "2021"],
+      description: "Certified in using the Databricks Lakehouse Platform for data engineering tasks, including ETL processes, data transformation, and pipeline optimization.",
       link: {
-        label: "View Credential",
-        href: "https://www.credential.net/18a3033f-d409-4bca-b6cc-ba4c17cadd26#acc.jMifb8TS"
+        label: "Verify Credential",
+        href: "https://credentials.databricks.com/3176e54a-9b55-433b-aca4-de58c48aba99#acc.vKMgxNOD"
       }
     },
     {
-      title: "Harvest Store + Cafe",
-      techStack: ["Next.js", "Gemini AI", "TypeScript", "Tailwind"],
-      description: "Built a modern cafe website integrating Google's Gemini AI for enhanced customer interaction and menu recommendations. Code available at github.com/Bonythomasv/harvest-cafe-store",
+      title: "Microsoft Certified: Azure Data Engineer Associate",
+      techStack: ["Azure", "2024"],
+      description: "Certified in designing and implementing data storage, data processing, and data security solutions using Microsoft Azure data services.",
+    },
+    {
+      title: "Microsoft Certified: Azure Data Fundamentals",
+      techStack: ["Azure", "2023"],
+      description: "Certified in core data concepts and how they're implemented using Microsoft Azure data services.",
+    },
+    {
+      title: "Microsoft Certified: Azure Fundamentals",
+      techStack: ["Azure", "2023"],
+      description: "Certified in cloud concepts, core Azure services, security, privacy, compliance, and pricing.",
+    },
+    {
+      title: "Python (Basic)",
+      techStack: ["Python", "2022"],
+      description: "Certified in Python programming fundamentals including data structures, algorithms, and problem-solving.",
+    },
+    // Side Projects
+    {
+      title: "Pulse",
+      techStack: ["Test Automation", "phData", "2018"],
+      description: "Contributed to create a test suite for the Pulse Application, a log aggregation framework built on top of Solr Cloud.",
       link: {
-        label: "theharvestcafe.ca",
-        href: "https://theharvestcafe.ca"
+        label: "View on GitHub",
+        href: "https://github.com/MariyamG/pulse"
       }
     }
   ],
+  certifications: [],
+  awards: [
+    {
+      name: "Growth Guru",
+      issuer: "Avanade",
+      date: "Jan 2023",
+      association: "Avanade",
+      description: "As the first contingent worker from Avanade Canada in Meta, I played a key role in expanding the team to 31 members through exceptional performance and leadership."
+    },
+    {
+      name: "phDer Award",
+      issuer: "phData Inc.",
+      date: "Aug 2020",
+      association: "phData Inc.",
+      description: "Achieved the award for the best performing team for continually providing support activities for client."
+    }
+  ]
 } as const;

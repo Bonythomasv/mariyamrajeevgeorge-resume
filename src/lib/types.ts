@@ -25,9 +25,11 @@ export interface ResumeData {
   };
   education: Array<{
     school: string;
+    location: string;
     degree: string;
     start: string;
     end: string;
+    description: string;
   }>;
   work: Array<{
     company: string;
@@ -39,6 +41,10 @@ export interface ResumeData {
     description: string | React.ReactNode;
   }>;
   skills: string[];
+  languages?: Array<{
+    name: string;
+    level: string;
+  }>;
   projects: Array<{
     title: string;
     techStack: string[];
@@ -47,6 +53,21 @@ export interface ResumeData {
       label: string;
       href: string;
     };
+  }>;
+  certifications?: Array<{
+    name: string;
+    year: string;
+    link?: {
+      label: string;
+      href: string;
+    };
+  }>;
+  awards?: Array<{
+    name: string;
+    issuer: string;
+    date: string;
+    description: string;
+    association: string;
   }>;
 }
 
