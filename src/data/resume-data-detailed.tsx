@@ -32,9 +32,11 @@ export const RESUME_DATA_DETAILED: ResumeData = {
   education: [
     {
       school: "Cochin University of Science and Technology",
+      location: "Kochi, India",
       degree: "Bachelor of Technology in Electronics and Communication",
       start: "2006",
       end: "2010",
+      description: "Bachelor's degree with focus on electronics and communication systems."
     },
   ],
   work: [

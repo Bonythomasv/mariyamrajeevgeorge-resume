@@ -31,7 +31,7 @@ export const RESUME_DATA: ResumeData = {
         icon: "linkedin",
       },
     ],
-    image: "/mariyam-profile.jpg", // Profile image in public directory
+    // image: "/mariyam-profile.jpg", // Profile image in public directory
   },
   education: [
     {
