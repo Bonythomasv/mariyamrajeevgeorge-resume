@@ -34,16 +34,18 @@ export default async function Image() {
         }}
       >
         {/* biome-ignore lint/performance/noImgElement: ImageResponse context requires img element */}
-        <img
-          src={RESUME_DATA.avatarUrl}
-          alt={RESUME_DATA.name}
-          style={{
-            width: "150px",
-            height: "150px",
-            borderRadius: "10%",
-            marginBottom: "2rem",
-          }}
-        />
+        {RESUME_DATA.avatarUrl && (
+          <img
+            src={RESUME_DATA.avatarUrl}
+            alt={RESUME_DATA.name}
+            style={{
+              width: "150px",
+              height: "150px",
+              borderRadius: "10%",
+              marginBottom: "2rem",
+            }}
+          />
+        )}
         <div
           style={{
             fontSize: "3rem",

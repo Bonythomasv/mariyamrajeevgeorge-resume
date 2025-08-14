@@ -6,12 +6,12 @@ export type IconType = "github" | "linkedin" | "x" | "globe" | "mail" | "phone";
 
 export interface ResumeData {
   name: string;
-  initials: string;
+  initials?: string;
   location: string;
   locationLink: string;
   about: string;
   summary: string | React.ReactNode;
-  avatarUrl: string;
+  avatarUrl?: string;
   personalWebsiteUrl?: string;
   contact: {
     email: string;
@@ -114,12 +114,12 @@ export interface GraphQLProject {
 
 export interface GraphQLMe {
   name: string;
-  initials: string;
+  initials?: string;
   location: string;
   locationLink: string;
   about: string;
   summary: string;
-  avatarUrl: string;
+  avatarUrl?: string;
   personalWebsiteUrl?: string;
   contact: GraphQLContact;
   education: GraphQLEducation[];
@@ -150,7 +150,7 @@ export function resumeDataToGraphQL(data: ResumeData): GraphQLMe {
     locationLink: data.locationLink,
     about: data.about,
     summary: reactToString(data.summary),
-    avatarUrl: data.avatarUrl,
+    ...(data.avatarUrl && { avatarUrl: data.avatarUrl }),
     personalWebsiteUrl: data.personalWebsiteUrl,
     contact: {
       email: data.contact.email,

@@ -2,11 +2,9 @@ import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
   name: "Mariyam Rajeev George",
-  initials: "MG",
   location: "", // Temporarily disabled
   locationLink: "", // Temporarily disabled
   about: "Senior Data Engineer at Avanade @ Meta | Ex-phData @ Cargill | Databricks Certified | 9+ Years Experience",
-  avatarUrl: "/mariyam-profile.jpg",
   summary: (
     <>
       Data Engineer with 9+ years of experience building scalable, low-latency data systems at companies
@@ -210,6 +208,13 @@ export const RESUME_DATA: ResumeData = {
   ],
   certifications: [],
   awards: [
+    {
+      name: "AI Ambassador Award",
+      issuer: "Avanade",
+      date: "2024",
+      association: "Avanade",
+      description: "Spearheaded and expanded a biweekly AI upskilling program impacting 30+ engineers. Developed comprehensive learning tracks from beginner to expert levels, organized a Gen AI hackathon, and facilitated GenAI use case demonstrations, resulting in 30+ engineers mastering Gen AI tools and 10+ engineers advancing to Azure AI 102 certification."
+    },
     {
       name: "Growth Guru",
       issuer: "Avanade",

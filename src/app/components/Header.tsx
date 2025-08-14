@@ -200,12 +200,14 @@ export function Header() {
         />
       </div>
 
-      <Avatar
-        className="size-28"
-        src={RESUME_DATA.avatarUrl}
-        alt={`${RESUME_DATA.name}'s profile picture`}
-        fallback={RESUME_DATA.initials}
-      />
+      {RESUME_DATA.avatarUrl && (
+        <Avatar
+          className="size-28"
+          src={RESUME_DATA.avatarUrl}
+          alt={`${RESUME_DATA.name}'s profile picture`}
+          fallback={RESUME_DATA.name.split(' ').map(n => n[0]).join('')}
+        />
+      )}
     </header>
   );
 }
