@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description: `Professional resume of ${RESUME_DATA.name}, ${RESUME_DATA.about}`,
     images: [
       {
-        url: "https://mariyamrajeevgeorge-resume.vercel.app/og-image.jpg",
+        url: "https://mariyamrajeevgeorge-resume.vercel.app/og-image.jpeg",
         width: 1200,
         height: 630,
         alt: `${RESUME_DATA.name}'s Resume`,
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     creator: "@mariyamrajeevg",
     title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
     description: `Professional resume of ${RESUME_DATA.name}, ${RESUME_DATA.about}`,
-    images: ["https://mariyamrajeevgeorge-resume.vercel.app/og-image.jpg"],
+    images: ["https://mariyamrajeevgeorge-resume.vercel.app/og-image.jpeg"],
   },
   alternates: {
     canonical: "https://mariyamrajeevgeorge-resume.vercel.app",
